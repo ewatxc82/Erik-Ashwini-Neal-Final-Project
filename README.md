@@ -14,3 +14,28 @@ Kaggle Link - https://www.kaggle.com/andrewmvd/heart-failure-clinical-data
 Original Study - https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0181001
 
 Features: Age, Ejection Fraction, Serum Creatinine, Serum Sodium, Anemia, Platelets, Creatinine Phosphokinase, Blood Pressure, Gender, Diabetes, Smoking Status, and Death Event
+
+## Technologies Used
+
+- Pandas
+- HTML
+- CSS
+- Bootstrap
+- SKLearn
+- Logistic Regression Analysis
+- Random Forest
+
+## Process
+
+- ETL directily from the linked website. 
+- Cleaned data and performed exploratory analysis
+- Removed Death Event to train and test the data
+- Performed Logistic Regression Analysis and Random Forest Machine Learning on dataset
+- Found key features to hone model
+- Created website using HTML/CSS/Bootstrap to display our process and findings in blog format
+- Deployed via Heroku
+
+## Website
+heart-analysis-death-event.herokuapp.com 
+
+![website] Image 4-20-21 at 3.24 PM.png![image](https://user-images.githubusercontent.com/71682440/115459493-bc64ab80-a1ec-11eb-9389-58f97db2a07b.png)
