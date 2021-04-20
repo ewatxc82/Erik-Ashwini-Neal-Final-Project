@@ -36,6 +36,6 @@ Features: Age, Ejection Fraction, Serum Creatinine, Serum Sodium, Anemia, Platel
 - Deployed via Heroku
 
 ## Website
-heart-analysis-death-event.herokuapp.com 
+https://heart-analysis-death-event.herokuapp.com 
 
-![website] Image 4-20-21 at 3.24 PM.png![image](https://user-images.githubusercontent.com/71682440/115459493-bc64ab80-a1ec-11eb-9389-58f97db2a07b.png)
+[image](https://user-images.githubusercontent.com/71682440/115459493-bc64ab80-a1ec-11eb-9389-58f97db2a07b.png)
