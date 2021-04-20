@@ -25,6 +25,7 @@ Features: Age, Ejection Fraction, Serum Creatinine, Serum Sodium, Anemia, Platel
 - SKLearn
 - Logistic Regression Analysis
 - Random Forest
+- SVC
 
 ## Process
 
