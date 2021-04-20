@@ -74,16 +74,28 @@
   <div class="container">
     <div class="row mt-row">
       <div class="col-md-4 col-md-offset-2">
-        <h3>MODEL EXAMPLE NUMERO UNO</h3>
-        <p>This is where we put our first paragraph of analysis for this model.</p>
-        <p>We will continue talking about what we are seeing. We might not even have to make this a model. We could use this as an intro to what we are trying to study. This might help us break
-          down our plan of action even better.</p>
-        <p>This will be the final paragraph of our analysis/intro. I will repeat everything in the section below and we can make as many as we want to. If you want, we can also make separate pages as well!
-          all very exciting stuff.</p>
+        <!--LINK YOUR CITATIONS AND DESCRIBE YOUR DATASET-->
+        <h3>BACKGROUND ON THE DATASET</h3>
+        <p>The dataset used for our study is derived from heart failure patients admitted to the
+          Institute of Cardiology and Allied Hospital Faisalabad-Pakistan from April to December of 2015.
+          All patients are aged 40 years, or olders, and were suffering NYHA class III or IV left ventricular 
+          systolic dysfunction at the time the data was recorded. These are all follow-up visits to the institute.
+        </p>
+        <p>For each patient, the following features were recorded during their heart failure event:
+          Age, Ejection Fraction, Serum Creatinine, Serum Sodium, Anemia, Platelets, Creatinine Phosphokinase, 
+          Blood Pressure, Gender, Diabetes, and Smoking Status. Whether or not the incident lead to a Death Event 
+          is also recorded. We used regression analysis and machine learning to evaluate the statistical importance
+          of each feature is when evaluating mortality of the patients listed in the dataset.
+        </p>
+        <p>This dataset was collected and studied using Cox regression in a study titled:
+          "Survival analysis of heart failure patients: A case study"
+          You can view the authors' methods, results and data visualization by clicking the button below.
+        </p>
+        <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0181001" class="btn btn-success">Survival analysis of heart failure patients</a>
       </div>
 
-      <div class="col-md-6">
-        <img class="img-responsive" src="HTML/img/dataset_head.png">
+      <div class="col-lg-6">
+        <img class="img-responsive" src="HTML/img/data_head.png">
       </div>
 
     </div>
@@ -93,95 +105,104 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 mac">
-          <img src="HTML/img/sample_graph.png" class="img-responsive">
+          <img src="HTML/img/logregressionex.png" class="img-responsive">
         </div>
         <div class="col-md-4">
-          <h3>MODEL EXAMPLE NUMERO DOS</h3>
-          <p>We will continue talking about what we are seeing. We might not even have to make this a model. We could use this as an intro to what we are trying to study. This might help us break
-            down our plan of action even better.</p>
-          <p>This will be the final paragraph of our analysis/intro. I will repeat everything in the section below and we can make as many as we want to. If you want, we can also make separate pages as well!
-            all very exciting stuff.</p>
+          <h3>METHODS</h3>
+          <p>Our analysis is aimed at predicting death events of patients experiencing heart failure and surveying
+            the importance of features exhibited by each during the recorded heart failure event.</p>
+          <p>Since linear regression gives us a continuous output, we chose to apply logistic regression's
+             Maximum Likelihood Estimation approach to the dataset. Linear regression analysis also provides
+            us the ability to evaluate the importance of each feature in predicting the binary survival outcome.</p>
+          <p>We also used random forest machine learning on the dataset because it proved to be the top classifying machine learning
+            technology available to us.
+          </p>
         </div>
 
       </div>
     </div>
   </div>
+    <!-- /.container -->
+  </div>
+  <div class="container">
+    <div class="row mt-row">
+      <div class="col-md-4 col-md-offset-2">
+        <!--HEATMAP SAMPLE-->
+        <h3>REGRESSION ANALYSIS & MACHINE LEARNING RESULTS - SURVIVAL</h3>
+        <p>After removing the Death Event column from our dataset, we split the data for training and testing.
+          We then proceeded to run logistic regression and random forest machine learning analysis on the dataset.
+        </p>
+        <p>Both our logistic regression and random forest analysis came back with scores of .8 or above for predicting 
+          mortality of the test data.
+        </p>
+        <p>Overall, random forest proved to be slightly better at predicting the survival of a patient than logistic regression.
+          But, but methods left us with scores of .8 or higher which leads us to believe, when evaluating patients returning for care 
+          after a previous heart event, both methods can achieve similar results when given the same input information.
+        </p>
+      </div>
+
+      <div class="col-md-6">
+        <img class="img-responsive" src="HTML/img/results.png">
+      </div>
 
   <div id="gwrap">
     <div class="container">
       <div class="row">
         <div class="col-md-4 col-md-offset-2">
-          <img class="img-responsive" src="HTML/img/ipad.jpg">
+          <img class="img-responsive" src="HTML/img/features.png">
+          <img class="img-responsive" src="HTML/img/features2.png">
         </div>
         <div class="col-md-4">
-          <h3>A SLIGHTLY DIFFERENT FORMAT WE CAN USE!!</h3>
-          <p>Yes this is a different format but could be useful. I can remove or keep the button. We'll see what we want to do.</p>
-          <p>Again, this is just the second paragraph of the the container so the world is still our oyster at this point.</p>
-          <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-          <p>I can totally make a different container to display different data visualization if you want as well. The CSS is set up real nice so this will be pretty easy. Yay!</p>
-          <p><a href="#" class="btn btn-success">STILL DON'T KNOW IF WE'LL KEEP!</a></p>
+          <h3>REGRESSION ANALYSIS & MACHINE LEARNING RESULTS - FEATURES</h3>
+          <p>We found four different features that played a prominent part in predicting the survival of a patient
+            in our data: Time, Serum Creatinine, Ejection Fraction, and Age. With some minor disagreements between 
+            the logistic regression and random forest models used, the combination of these four features ranked highest 
+            in importance.
+          </p>
+          <p>Separating the top three or five features and retesting on that data did not give us any better results however.
+            In fact, testing using less features actually decreased the accuracy of both logistic regression and random forest
+            models. This leads us to believe that the remaining features, with diminished importance, still play a key role 
+            in being able to predict a patient's survivability.</p>
+            <p>Click the button below to review our code and results at on the GitHub where this project is deposited</p>
+            <a href="https://github.com/ewatxc82/Erik-Ashwini-Neal-Final-Project/blob/main/modeling/heart_failure_models.ipynb" class="btn btn-success">Analysis Notebook</a>
         </div>
       </div>
     </div>
+        <!-- /.container -->
   </div>
-
   <div class="container">
     <div class="row mt-row">
-      <h3 style="text-align:center">TRY US NOW</h3>
-      <br/>
-      <div class="col-md-6 col-md-offset-3">
-        <form role="form" action="register.php" method="post" enctype="plain">
-          <input type="email" name="email" class="subscribe-input" placeholder="Enter your e-mail address..." required>
-          <button class='btn btn-submit subscribe-submit' type="submit">Subscribe</button>
-        </form>
-
+      <div class="col-md-4 col-md-offset-2">
+        <!--HEATMAP SAMPLE-->
+        <h3>CONCLUSIONS</h3>
+        <p>Before we dive into conclusions reached by our analysis we need to talk about weaknesses of the dataset.
+          The dataset reviewed was not split evenly by gender and the dataset is fairly small. With only 299 patients 
+          observed, we can infer that a larger dataset would provide more reliable results. Additional information about 
+          patients would also contribute to stronger modeling such as: height, weight, body mass index, etc. The dataset
+          also doesn't list other traits that may be characteristic of heart failure such as family history or alcohol intake.
+        </p>
+        <p>Time, far and away, was the most important feature. This dataset monitors patients that are returning to the institute
+          for treatment for another heart failure. The time column measures the time in between the first and second visit.
+          the sooner patients return for heart failure, the lower the survival rate tends to be. Serum Creatinine (associated
+          with renal function) and Ejection Fraction (the amount of blood pumped out of the ventricle with each contraction)
+          also carry significant importance within the models. Scientists who've committed traditional biostatistics analysis to
+          the same dataset have also selected these features as the two most relevant. This provides us a high level of confidence
+          that random forest and regression analysis can be effective tools when attempting to predict the survival rate of similar 
+          heart failure patients when given the same kind of data.
+        </p>
+        <p>Click the button below to review our code and results at on the GitHub where this project is deposited</p>
+        <a href="https://github.com/ewatxc82/Erik-Ashwini-Neal-Final-Project/blob/main/modeling/heart_failure_models.ipynb" class="btn btn-success">Analysis Notebook</a>
       </div>
-    </div>
+      <div class="col-md-6">
+        <img class="img-responsive" src="HTML/img/heatmap.png">
+      </div>
   </div>
 
-  <div id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          <h3>Contact Form</h3>
-          <form class="contact-form php-mail-form" role="form" action="HTML/contactform/contactform.php" method="POST">
 
-            <div class="form-group">
-              <input type="name" name="name" class="form-control" id="contact-name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" >
-              <div class="validate"></div>
-            </div>
-            <div class="form-group">
-              <input type="email" name="email" class="form-control" id="contact-email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
-              <div class="validate"></div>
-            </div>
-            <div class="form-group">
-              <input type="text" name="subject" class="form-control" id="contact-subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject">
-              <div class="validate"></div>
-            </div>
-
-            <div class="form-group">
-              <textarea class="form-control" name="message" id="contact-message" placeholder="Your Message" rows="5" data-rule="required" data-msg="Please write something for us"></textarea>
-              <div class="validate"></div>
-            </div>
-
-            <div class="loading"></div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your message has been sent. Thank you!</div>
-
-            <div class="form-send">
-              <button type="submit" class="btn btn-large">Send Message</button>
-            </div>
-
-          </form>
-
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- / contact -->
 
   <div id="copyrights">
     <div class="container">
+      <p>Authors: Erik Watson, Ashwini Kamat, Neal Tarver</p>
       <p>
         &copy; Copyrights <strong>GoodLanding</strong>. All Rights Reserved
       </p>
